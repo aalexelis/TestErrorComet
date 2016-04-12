@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testerror</title>
+</head>
+<body>
+    <div id="main" data-lift="surround?with=default;at=content">
+        <div data-lift="TestErrorComet"></div>
+        <script>
+            $(document).ready( function() {
+
+            window.onerror = function() {
+    alert("Error caught");
+};
+
+            var item = {ha: "ha"} ;
+            window.backend.test(item).then(
+              function(item){
+                console.log("OK");
+              },
+              function(reason){
+                console.log("NG");
+              }
+            );
+            });
+        </script>
+    </div>
+
+</body>
+</html>

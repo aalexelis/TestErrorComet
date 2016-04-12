@@ -1,0 +1,13 @@
+target/
+project/
+myjlpt-doc/dbflute-intro/src/
+.project
+.settings/
+.idea/
+lift_proto.db*
+logs/
+*.log
+.cache*
+.classpath
+.idea_modules/
+projectFilesBackup1/
